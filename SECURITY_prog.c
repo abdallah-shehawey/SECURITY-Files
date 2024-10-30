@@ -11,6 +11,12 @@
 #include "STD_TYPES.h"
 #include "STD_MACROS.h"
 
+#include "DIO_interface.h"
+#include "EEPROM_interface.h"
+
+#include "SECURITY_config.h"
+#include "SECURITY_interface.h"
+
 #if OUTPUT_SCREEN == CLCD_OUTPUT
 #if INPUT_DATA == KPD_INPUT
 #include "KPD_interface.h"
@@ -28,11 +34,7 @@
 #endif
 #endif
 
-#include "DIO_interface.h"
-#include "EEPROM_interface.h"
 
-#include "SECURITY_config.h"
-#include "SECURITY_interface.h"
 
 /*To get Username And Password Length from number of input */
 volatile u8 UserName_Length = 0, PassWord_Length = 0;
