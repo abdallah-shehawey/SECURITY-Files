@@ -4,13 +4,13 @@
 
 ### Description
 
-These files contain code to add a dynamic password for enhancing the security of your project. The password is stored in EEPROM so that it is not erased when the program is closed.
+These files add a dynamic password to boost project security. The password is stored in EEPROM to retain settings even after closing the program.
 
 ### Configuration Options
 
-- **Maximum Login Attempts:** Set to `3` (defined by `Tries_Max`).
-- **Username Requirements:** Minimum length of `7` characters (defined by `USERNAME_MIN_LENGTH`).
-- **Password Requirements:** Minimum length of `5` characters (defined by `PASSWORD_MIN_LENGTH`).
+- **Maximum Login Attempts:** `3` (defined by `Tries_Max`).
+- **Username Requirements:** Minimum `7` characters (defined by `USERNAME_MIN_LENGTH`).
+- **Password Requirements:** Minimum `5` characters (defined by `PASSWORD_MIN_LENGTH`).
 
 ### Input and Output Configuration
 
@@ -18,37 +18,34 @@ These files contain code to add a dynamic password for enhancing the security of
   - `CLCD_OUTPUT`
   - `TERMINAL_OUTPUT`
   
-  The output type is defined by the `OUTPUT_SCREEN` macro.
+  Configure the output type using the `OUTPUT_SCREEN` macro.
 
 - **Input Options:**
   - `KPD_INPUT`
   - `TERMINAL_INPUT`
   
-  The input type is defined by the `INPUT_DATA` macro.
+  Set the input type through the `INPUT_DATA` macro.
 
 ### Function Mapping
 
-  - You can specify function names used for interacting with different modules in your project:
-  - If the function names in your drivers are not the same as the function names in my drivers, all you need to do is change the function names of the macros in the config.h file, and then the code will work perfectly for you.
-
+If your function names differ, simply update the macros in the config.h file to match your module functions. This will ensure compatibility with your project’s drivers.
 
 ### Usage Instructions
 
 1. **Initialize EEPROM:**
-   - Retrieve the username and password length from EEPROM.
-   - Load the number of remaining login attempts.
+   - Retrieve username and password length from EEPROM.
+   - Load remaining login attempts.
 
 2. **User Registration:**
-   - If no username is found, prompt the user to set one up.
-   - Validate the username based on minimum length requirements.
+   - If no username exists, prompt the user to set one.
+   - Ensure the username meets the length requirement.
 
 3. **Security Features:**
-   - Lock the user out after exceeding the maximum number of attempts.
-   - Store the username and password securely in EEPROM for future logins.
+   - Lock the user out after exceeding maximum attempts.
+   - Securely store username and password in EEPROM.
 
-## File Tests
-[You can see the tests for these files in this repository](https://github.com/abdallah-shehawey/Advanced-Safe.git)
+## Testing
+You can find testing details for these files in the repository: [Advanced-Safe](https://github.com/abdallah-shehawey/Advanced-Safe.git)
 
-### Conclusion
-
-Make sure to adjust the configuration file to meet the needs of your project, and define the necessary input/output methods and function mappings to suit your hardware setup.
+## Resources for Use and Adaptation
+You may refer to [this LinkedIn post](https://www.linkedin.com/posts/abdallah-shehawey_embeddedsystems-microcontroller-atmega32-activity-7257827462447857664-sBEJ?utm_source=share&utm_medium=member_desktop) for further insights on using and adapting these files for your specific setup.
