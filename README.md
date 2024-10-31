@@ -44,8 +44,18 @@ If your function names differ, simply update the macros in the config.h file to 
    - Lock the user out after exceeding maximum attempts.
    - Securely store username and password in EEPROM.
 
+### Function Mapping in `config.h`
+
+To ensure smooth integration with your project, map the function names in `config.h` to match the names used in your driver files. This enables compatibility without requiring code modifications across multiple files. Simply adjust the macros in `config.h` to match your project's existing function names.
+
+For example:
+
+#define CLCD_SendStringFuncName       // Replace with your send function
+#define KPD_GetPressedFunName        // Replace with your keypad or terminal input function
+
 ## Testing
 You can find testing details for these files in the repository: [Advanced-Safe](https://github.com/abdallah-shehawey/Advanced-Safe.git)
 
 ## Resources for Use and Adaptation
-You may refer to [this LinkedIn post](https://www.linkedin.com/posts/abdallah-shehawey_embeddedsystems-microcontroller-atmega32-activity-7257827462447857664-sBEJ?utm_source=share&utm_medium=member_desktop) for further insights on using and adapting these files for your specific setup.
+For additional guidance on configuring and adapting these files to be suitable for your project, check out this [LinkedIn post](https://www.linkedin.com/posts/abdallah-shehawey_embeddedsystems-microcontroller-atmega32-activity-7257827462447857664-sBEJ?utm_source=share&utm_medium=member_desktop).
+
