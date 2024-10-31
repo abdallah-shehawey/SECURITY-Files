@@ -46,6 +46,9 @@ These files contain code to add a dynamic password for enhancing the security of
    - Lock the user out after exceeding the maximum number of attempts.
    - Store the username and password securely in EEPROM for future logins.
 
+## File Tests
+[You can see the tests for these files in this repository](https://github.com/abdallah-shehawey/Advanced-Safe.git)
+
 ### Conclusion
 
 Make sure to adjust the configuration file to meet the needs of your project, and define the necessary input/output methods and function mappings to suit your hardware setup.
